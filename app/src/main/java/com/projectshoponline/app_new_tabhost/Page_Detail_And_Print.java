@@ -122,7 +122,7 @@ public class Page_Detail_And_Print extends AppCompatActivity {
             if (v == btnConn) {
                 if( connFlag == 0 ){   //������������˰�ť������������߳�
                     connFlag = 1;
-                    Log.d("wifi����","���\"����\"");
+                    Log.d("wifi","���\"����\"");
                     String strAddressIp = txt_ip.getText().toString();
                     wfComm.initSocket(strAddressIp,9100);
                 }
