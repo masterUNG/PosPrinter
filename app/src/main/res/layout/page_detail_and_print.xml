@@ -13,7 +13,7 @@
         android:layout_margin="5dp"
         android:layout_marginLeft="5dp"
         android:orientation="horizontal"
-        android:visibility="gone"
+        android:visibility="visible"
         >
 
         <TextView

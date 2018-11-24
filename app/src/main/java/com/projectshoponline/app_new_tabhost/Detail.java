@@ -578,7 +578,15 @@ public class Detail extends AppCompatActivity {
     }
 
 class ClickEvent implements View.OnClickListener {
+
+    String tag = "24novV1";
+
     public void onClick(View v) {
+
+        Log.d(tag, "You Click ==> " + v.toString());
+
+
+
         if (v == btnConn) {
             if( connFlag == 0 ){   //������������˰�ť������������߳�
                 connFlag = 1;
@@ -587,7 +595,11 @@ class ClickEvent implements View.OnClickListener {
                 wfComm.initSocket(strAddressIp,9100);
             }
         } else if (v == btnPrint) {
+
+//            Start Pring
             String msg = edtContext.getText().toString();
+
+            Log.d(tag, "msg ==> " + msg);
            // String msg = listView_1.toString();
 
             Toast.makeText(Detail.this, "ok", Toast.LENGTH_SHORT).show();
@@ -682,8 +694,8 @@ class ClickEvent implements View.OnClickListener {
             switch (msg.what) {
                 case WifiCommunication.WFPRINTER_CONNECTED:
                     connFlag = 0;
-                    // Toast.makeText(getApplicationContext(), "Connect the WIFI-printer successful",
-                    //         Toast.LENGTH_SHORT).show();
+                     Toast.makeText(getApplicationContext(), "Connect the WIFI-printer successful",
+                             Toast.LENGTH_SHORT).show();
                     btnPrint.setEnabled(true);
                     btn_test.setEnabled(true);
                     btnClose.setEnabled(true);
