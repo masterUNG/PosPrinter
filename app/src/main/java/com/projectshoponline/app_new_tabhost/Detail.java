@@ -602,7 +602,7 @@ class ClickEvent implements View.OnClickListener {
             Log.d(tag, "msg ==> " + msg);
            // String msg = listView_1.toString();
 
-            Toast.makeText(Detail.this, "ok", Toast.LENGTH_SHORT).show();
+
 
 
             //feedPaperCutPartial();
@@ -618,6 +618,11 @@ class ClickEvent implements View.OnClickListener {
                 tail[0] = 0x0A;
                 tail[1] = 0x0D;
                 wfComm.sndByte(tail);
+
+
+                Toast.makeText(Detail.this, "ok", Toast.LENGTH_SHORT).show();
+
+
             }
         } else if (v == btnClose) {
             wfComm.close();
